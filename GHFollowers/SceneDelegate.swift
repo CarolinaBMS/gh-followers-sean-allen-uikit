@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return } //Before, the constant name was '_', but we can't use it without a proper name, therefore 'windowScene'.
         
-                        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds) //fill up all the screen
         window?.windowScene = windowScene
         window?.rootViewController = createTabBar()
@@ -25,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
     func createSearchNC()-> UINavigationController {
-        let searchVC = SearchViewController()
+        let searchVC = SearchVC()
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
@@ -34,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func createFavoriteNC() -> UINavigationController {
-        let favoriteListVC = FavoritesListViewController()
+        let favoriteListVC = FavoritesListVC()
         favoriteListVC.title = "Favorites"
         favoriteListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         
